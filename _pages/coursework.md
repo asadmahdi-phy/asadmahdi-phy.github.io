@@ -5,7 +5,7 @@ title: coursework
 permalink: /additional-coursework/
 description: Schools, workshops, and supplementary coursework in theoretical physics, gravitational waves, quantum information, quantum computing, machine learning, and scientific programming.
 nav: true
-nav_order: 5
+nav_order: 7
 ---
 
 <style>
