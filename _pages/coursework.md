@@ -1,11 +1,11 @@
 ```html
 ---
 layout: page
-title: coursework
-permalink: /additional-coursework/
-description: Schools, workshops, and supplementary coursework in theoretical physics, gravitational waves, quantum information, quantum computing, machine learning, and scientific programming.
+title: additional coursework
+permalink: /coursework/
+description: Schools, workshops, and supplementary courses in theoretical physics, gravitational waves, quantum information, and scientific computing.
 nav: true
-nav_order: 7
+nav_order: 5
 ---
 
 <style>
