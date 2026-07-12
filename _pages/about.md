@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: “Life is like riding a bicycle. To keep your balance, you must keep moving.” ― Albert Einstein
+subtitle: “When fishermen cannot go to sea, they repair nets.”
 
 profile:
   align: right
