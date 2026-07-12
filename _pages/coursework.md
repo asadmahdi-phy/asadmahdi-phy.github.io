@@ -1,4 +1,3 @@
-```html
 ---
 layout: page
 title: coursework
@@ -594,4 +593,4 @@ nav_order: 6
   </div>
 
 </div>
-```
+
