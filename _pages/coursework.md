@@ -1,11 +1,11 @@
 ```html
 ---
 layout: page
-title: additional coursework
+title: coursework
 permalink: /coursework/
-description: Schools, workshops, and supplementary courses in theoretical physics, gravitational waves, quantum information, and scientific computing.
+description: Schools, workshops, and supplementary coursework in theoretical physics, gravitational waves, quantum information, quantum computing, machine learning, and scientific programming.
 nav: true
-nav_order: 5
+nav_order: 6
 ---
 
 <style>
