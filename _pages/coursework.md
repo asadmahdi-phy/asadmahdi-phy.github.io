@@ -1,8 +1,9 @@
+```html
 ---
 layout: page
-title: additional coursework
-permalink: /coursework/
-description: Schools, workshops, and supplementary courses in theoretical physics, gravitational waves, quantum information, and scientific computing.
+title: coursework
+permalink: /additional-coursework/
+description: Schools, workshops, and supplementary coursework in theoretical physics, gravitational waves, quantum information, quantum computing, machine learning, and scientific programming.
 nav: true
 nav_order: 5
 ---
@@ -18,7 +19,7 @@ nav_order: 5
 
   .coursework-item {
     display: grid;
-    grid-template-columns: 8.5rem minmax(0, 1fr);
+    grid-template-columns: 9rem minmax(0, 1fr);
     column-gap: 1.5rem;
     padding: 1.4rem 0;
     border-bottom: 1px solid var(--global-divider-color);
@@ -41,7 +42,7 @@ nav_order: 5
   }
 
   .coursework-institution {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.55rem;
     color: var(--global-text-color-light);
     font-size: 0.95rem;
     font-weight: 500;
@@ -52,8 +53,18 @@ nav_order: 5
     line-height: 1.65;
   }
 
+  .coursework-topics {
+    margin: 0.65rem 0 0;
+    padding-left: 1.25rem;
+  }
+
+  .coursework-topics li {
+    margin-bottom: 0.35rem;
+    line-height: 1.55;
+  }
+
   .coursework-highlight {
-    margin-top: 0.45rem;
+    margin-top: 0.55rem;
     font-weight: 600;
   }
 
@@ -61,7 +72,7 @@ nav_order: 5
     display: flex;
     flex-wrap: wrap;
     gap: 0.55rem;
-    margin-top: 0.75rem;
+    margin-top: 0.8rem;
   }
 
   .coursework-link {
@@ -99,9 +110,10 @@ nav_order: 5
 <div class="coursework-intro">
   <p>
     In addition to my formal university education, I have participated in
-    specialized schools, workshops, and supplementary courses covering
-    theoretical physics, gravitational-wave data analysis, general relativity,
-    quantum information, quantum computing, and machine learning.
+    specialized schools, workshops, and supplementary courses in theoretical
+    physics, gravitational-wave data analysis, general relativity, quantum
+    information, quantum computing, machine learning, and scientific
+    programming.
   </p>
 </div>
 
@@ -119,9 +131,10 @@ nav_order: 5
       </div>
 
       <p class="coursework-description">
-        Lectures, tutorials, quizzes, and challenges on LIGO-Virgo-KAGRA
-        gravitational-wave data analysis, including signal processing,
-        compact-binary-coalescence searches, and parameter inference.
+        Lectures, tutorials, quizzes, and practical challenges on
+        LIGO-Virgo-KAGRA gravitational-wave data analysis, including signal
+        processing, searches for compact binary coalescences, and source
+        parameter inference.
       </p>
 
       <div class="coursework-links">
@@ -149,8 +162,8 @@ nav_order: 5
       </div>
 
       <p class="coursework-description">
-        Lectures on string theory, black holes, and the black-hole information
-        paradox.
+        Specialized lectures on string theory, black-hole physics, and the
+        black-hole information paradox.
       </p>
     </div>
   </div>
@@ -167,8 +180,8 @@ nav_order: 5
       </div>
 
       <p class="coursework-description">
-        Quantum field theory from canonical quantization to the path-integral
-        formulation.
+        An intensive introduction to quantum field theory, progressing from
+        canonical quantization to the path-integral formulation.
       </p>
 
       <div class="coursework-links">
@@ -184,27 +197,6 @@ nav_order: 5
     </div>
   </div>
 
-  <!-- Relativistic Geometrodynamics -->
-  <div class="coursework-item">
-    <div class="coursework-date">
-      July 2023<br>
-      to December 2023
-    </div>
-
-    <div class="coursework-content">
-      <h3>Modern Relativistic Geometrodynamics</h3>
-
-      <div class="coursework-institution">
-        Community of Physics
-      </div>
-
-      <p class="coursework-description">
-        Audited course on exterior calculus and its application to the
-        Einstein-Cartan formulation of general relativity.
-      </p>
-    </div>
-  </div>
-
   <!-- Qiskit Global Summer School -->
   <div class="coursework-item">
     <div class="coursework-date">September 2023</div>
@@ -217,10 +209,17 @@ nav_order: 5
       </div>
 
       <p class="coursework-description">
-        Qiskit fundamentals, quantum query algorithms, phase estimation,
-        factoring, quantum noise, iterative quantum phase estimation,
-        variational quantum eigensolvers, and noise-mitigation techniques.
+        Coursework and laboratory exercises covering:
       </p>
+
+      <ul class="coursework-topics">
+        <li>Qiskit fundamentals and quantum circuit programming</li>
+        <li>Quantum query algorithms</li>
+        <li>Quantum phase estimation and integer factorization</li>
+        <li>Iterative quantum phase estimation</li>
+        <li>Variational quantum eigensolvers</li>
+        <li>Quantum noise and error-mitigation techniques</li>
+      </ul>
 
       <p class="coursework-highlight">
         Earned the Quantum Excellence badge after completing all laboratory
@@ -261,27 +260,58 @@ nav_order: 5
       </div>
 
       <p class="coursework-description">
-        Completed introductory coursework in machine learning and reinforcement
-        learning, with pre-qualification for the AWS AI &amp; ML Scholarship.
+        Introductory coursework in machine learning and reinforcement learning.
+        Completion of the programme resulted in pre-qualification for the AWS
+        AI &amp; ML Scholarship.
       </p>
     </div>
   </div>
 
-  <!-- Womanium -->
+  <!-- Womanium and QWorld Programme -->
   <div class="coursework-item">
-    <div class="coursework-date">August 2023</div>
+    <div class="coursework-date">
+      August–September 2023
+    </div>
 
     <div class="coursework-content">
       <h3>Womanium Global Quantum Program 2023</h3>
 
       <div class="coursework-institution">
-        Womanium
+        Womanium and QWorld
       </div>
 
       <p class="coursework-description">
-        Modules on quantum key distribution, quantum error correction, quantum
-        hardware, and quantum software.
+        A global quantum-training programme comprising specialized coursework
+        in quantum communication, quantum error correction, quantum software,
+        and quantum hardware.
       </p>
+
+      <ul class="coursework-topics">
+        <li>
+          <strong>QMercury-1: Quantum Key Distribution</strong><br>
+          Classical cryptography and its limitations, quantum cryptography,
+          the BB84 protocol, quantum key distribution in the presence of
+          noise, and entanglement-based quantum key distribution.
+        </li>
+
+        <li>
+          <strong>QZinc-1: Quantum Error Correction</strong><br>
+          Classical and quantum error correction, quantum error-correcting
+          codes, and the stabilizer formalism.
+        </li>
+
+        <li>
+          <strong>Quantum Computing Software</strong><br>
+          Quantum optimization, quantum annealing, quadratic unconstrained
+          binary optimization, and quantum machine learning.
+        </li>
+
+        <li>
+          <strong>Quantum Hardware</strong><br>
+          Superconducting, trapped-ion, neutral-atom, photonic, and
+          silicon-based quantum-computing platforms.
+        </li>
+      </ul>
 
       <div class="coursework-links">
         <a
@@ -290,7 +320,43 @@ nav_order: 5
           target="_blank"
           rel="noopener noreferrer"
         >
-          Certificate
+          Programme Certificate
+        </a>
+
+        <a
+          class="coursework-link"
+          href="https://drive.google.com/file/d/1VqOcjjbpJDMEzt2ry34MXdfO4JMHvPwc/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          QMercury Certificate
+        </a>
+
+        <a
+          class="coursework-link"
+          href="https://drive.google.com/file/d/1MG2RkQJbiX_5hJWjgvmwsSn2VlGkWDhK/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          QZinc Certificate
+        </a>
+
+        <a
+          class="coursework-link"
+          href="https://drive.google.com/file/d/1Fcn_O9-oqj7Sx43MckbKqLaX4SZY5U7C/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Quantum Software Certificate
+        </a>
+
+        <a
+          class="coursework-link"
+          href="https://drive.google.com/file/d/1Nw_hhSwuH00qpgK58ktluOb3ZZBTm1pm/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Quantum Hardware Certificate
         </a>
       </div>
     </div>
@@ -308,8 +374,9 @@ nav_order: 5
       </div>
 
       <p class="coursework-description">
-        Deutsch-Jozsa, Bernstein-Vazirani, and Simon's algorithms, together
-        with solving the Max-Cut problem using Grover's search algorithm.
+        Quantum algorithm coursework covering the Deutsch-Jozsa,
+        Bernstein-Vazirani, and Simon algorithms, together with an application
+        of Grover's search algorithm to the Max-Cut problem.
       </p>
 
       <div class="coursework-links">
@@ -325,6 +392,26 @@ nav_order: 5
     </div>
   </div>
 
+  <!-- Relativistic Geometrodynamics -->
+  <div class="coursework-item">
+    <div class="coursework-date">
+      July–December 2023
+    </div>
+
+    <div class="coursework-content">
+      <h3>Modern Relativistic Geometrodynamics</h3>
+
+      <div class="coursework-institution">
+        Community of Physics
+      </div>
+
+      <p class="coursework-description">
+        Audited course on exterior calculus and differential-geometric methods
+        leading to the Einstein-Cartan formulation of general relativity.
+      </p>
+    </div>
+  </div>
+
   <!-- GR Workshop -->
   <div class="coursework-item">
     <div class="coursework-date">May 2023</div>
@@ -337,8 +424,9 @@ nav_order: 5
       </div>
 
       <p class="coursework-description">
-        Five-day introductory workshop comprising approximately 50 hours of
-        lectures on general relativity.
+        A five-day introductory workshop consisting of approximately 50 hours
+        of lectures on the mathematical and physical foundations of general
+        relativity.
       </p>
 
       <p class="coursework-highlight">
@@ -361,8 +449,7 @@ nav_order: 5
   <!-- Quantum Information -->
   <div class="coursework-item">
     <div class="coursework-date">
-      November 2022<br>
-      to May 2023
+      November 2022–May 2023
     </div>
 
     <div class="coursework-content">
@@ -373,10 +460,37 @@ nav_order: 5
       </div>
 
       <p class="coursework-description">
-        A series of three semester-long courses on quantum mechanics, quantum
-        information, and related computational methods, instructed by
-        Dr. Tibra Ali.
+        A three-course sequence designed as an introduction to quantum
+        information and artificial intelligence, instructed by Dr. Tibra Ali.
       </p>
+
+      <ul class="coursework-topics">
+        <li>
+          <strong>QI 101:</strong>
+          Quantum Mechanics for Quantum Information
+        </li>
+
+        <li>
+          <strong>QI 102:</strong>
+          Introduction to Quantum Information
+        </li>
+
+        <li>
+          <strong>AI 101:</strong>
+          Artificial Intelligence and Machine Learning
+        </li>
+      </ul>
+
+      <div class="coursework-links">
+        <a
+          class="coursework-link"
+          href="https://drive.google.com/file/d/1qvWFZlJZtaeWtSH3YGDhBsUAbuUIPd1V/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Detailed Course Outline
+        </a>
+      </div>
     </div>
   </div>
 
@@ -392,8 +506,8 @@ nav_order: 5
       </div>
 
       <p class="coursework-description">
-        Four online classes of four hours each, with graded assignments based
-        on the standard QBronze repository.
+        Four online classes of four hours each, accompanied by graded
+        assignments based on the standard QBronze educational repository.
       </p>
 
       <div class="coursework-links">
@@ -417,9 +531,10 @@ nav_order: 5
       <h3>Quantum Mechanics and Computation, Parts I and II</h3>
 
       <p class="coursework-description">
-        Fundamental concepts of quantum mechanics using wave-mechanical and
-        matrix-mechanical approaches, together with numerical simulations
-        using COMSOL.
+        Coursework on the fundamental concepts and mathematical formulation of
+        quantum mechanics using both wave-mechanical and matrix-mechanical
+        approaches. The programme also included numerical and physical-system
+        simulations using COMSOL.
       </p>
 
       <div class="coursework-links">
@@ -444,4 +559,39 @@ nav_order: 5
     </div>
   </div>
 
+  <!-- Python -->
+  <div class="coursework-item">
+    <div class="coursework-date">2020</div>
+
+    <div class="coursework-content">
+      <h3>Crash Course on Python</h3>
+
+      <div class="coursework-institution">
+        Google, offered through Coursera
+      </div>
+
+      <p class="coursework-description">
+        Introductory programming course covering Python syntax, data
+        structures, functions, loops, conditional logic, and basic programming
+        practices.
+      </p>
+
+      <p class="coursework-highlight">
+        Final grade: 95.50%
+      </p>
+
+      <div class="coursework-links">
+        <a
+          class="coursework-link"
+          href="https://coursera.org/share/ac78dfb3c9f38cac40ee09c9a3188296"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Certificate
+        </a>
+      </div>
+    </div>
+  </div>
+
 </div>
+```
