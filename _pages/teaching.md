@@ -5,7 +5,7 @@ title: teaching
 permalink: /teaching/
 description: University teaching, laboratory instruction, physics education, private tutoring, and TOEFL training.
 nav: true
-nav_order: 4
+nav_order: 6
 ---
 
 <style>
