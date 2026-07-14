@@ -281,7 +281,7 @@ nav_order: 5
           </li>
 
           <li>
-            Supervisors: Dr. Sylvain Marsat and Dr. Nicola Tamanini.
+            Supervisors: Dr. Sylvain Marsat and Dr. Manuel Piarulli.
           </li>
         </ul>
 
