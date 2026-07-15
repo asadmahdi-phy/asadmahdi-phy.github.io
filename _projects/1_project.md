@@ -61,10 +61,7 @@ $$
 the leading-order shift in the inferred parameters is
 
 $$
-\Delta\theta^{i}
-================
-
-\left(\Gamma^{-1}\right)^{ij}
+\Delta\theta^{i} = \left(\Gamma^{-1}\right)^{ij}
 \left\langle
 \partial_j h
 \middle|
@@ -72,13 +69,10 @@ $$
 \right\rangle,
 $$
 
-where (\Gamma_{ij}) is the Fisher information matrix. We compared this systematic shift with the statistical uncertainty,
+where \(\Gamma_{ij}\) is the Fisher information matrix. We compared this systematic shift with the statistical uncertainty,
 
 $$
-\sigma_i
-========
-
-\sqrt{\left(\Gamma^{-1}\right)_{ii}}.
+\sigma_i = \sqrt{\left(\Gamma^{-1}\right)_{ii}}.
 $$
 
 The ratio
