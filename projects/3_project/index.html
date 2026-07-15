@@ -3,17 +3,16 @@
 
   <!-- Head -->
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="refresh" content="3; url=/">    <!-- Metadata, OpenGraph and Schema.org -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
     
 
     <!-- Standard metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>project 3 | Asad Mahdi</title>
+    <title>Anisotropic Quenched Noise in the $\phi^4$ Model | Asad Mahdi</title>
     <meta name="author" content="Asad  Mahdi">
-    <meta name="description" content="a project that redirects to another website">
+    <meta name="description" content="Studying how spatially anisotropic frozen disorder affects critical behaviour and universality in the $\phi^4$ model.">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -118,169 +117,222 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">project 3</h1>
-            <p class="post-description">a project that redirects to another website</p>
+            <h1 class="post-title">Anisotropic Quenched Noise in the $\phi^4$ Model</h1>
+            <p class="post-description">Studying how spatially anisotropic frozen disorder affects critical behaviour and universality in the $\phi^4$ model.</p>
           </header>
 
           <article>
-            <p>Every project has a beautiful feature showcase page.
-It’s easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.</p>
+            <p>At Nordita, I am working with Dr. Dhrubaditya Mitra on a question at the intersection of statistical field theory and phase transitions: what happens to critical behaviour when spatially anisotropic, frozen disorder is introduced into the (\phi^4) model? Specifically, does this form of frozen roughness change the universal properties of the paramagnetic-to-ferromagnetic phase transition?</p>
 
-<p>To give your project a background in the portfolio page, just add the img tag to the front matter like so:</p>
+<h2 id="why-universality-matters">Why universality matters</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-layout: page
-title: project
-description: a project with a background image
-img: /assets/img/12.jpg
----
-</code></pre></div></div>
+<p>Near a critical point, the correlation length becomes very large compared with the microscopic length scales of the system. Consequently, many microscopic details cease to influence the large-scale behaviour. This is the origin of universality: systems that appear completely different microscopically can display identical behaviour near a critical point.</p>
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
+<p>Such systems belong to the same universality class and share the same critical exponents and scaling functions.</p>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/1-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/1-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/1-1400.webp"></source>
-    
+<p>The (\phi^4) model is one of the simplest field-theoretic descriptions of this type of phase transition. For an (n)-component order-parameter field (\boldsymbol{\phi}(\mathbf{x})), the clean Hamiltonian is</p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/1.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p>\begin{equation}
+\mathcal{H}_0[\boldsymbol{\phi}]
+=
+\int d^d x
+\left[
+\frac{1}{2}
+\left(\nabla\boldsymbol{\phi}\right)^2
++
+\frac{\tau}{2}\boldsymbol{\phi}^2
++
+\frac{u}{4!}
+\left(\boldsymbol{\phi}^2\right)^2
+\right].
+\end{equation}</p>
 
-  </picture>
+<p>The parameter (\tau) controls the distance from the critical point. At the mean-field level, a phase transition occurs when (\tau) changes sign.</p>
 
-</figure>
+<p>For (\tau&gt;0), the equilibrium state is</p>
 
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
+<p>\begin{equation}
+\boldsymbol{\phi}=0,
+\end{equation}</p>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/3-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/3-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/3-1400.webp"></source>
-    
+<p>which corresponds to the paramagnetic phase. For (\tau&lt;0), the system develops a nonzero order parameter, corresponding to the ferromagnetic phase.</p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/3.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p>Mean-field theory, however, neglects fluctuations. These fluctuations become increasingly important near criticality. The renormalization group is therefore required to determine the actual large-scale critical behaviour.</p>
 
-  </picture>
+<h2 id="adding-frozen-disorder">Adding frozen disorder</h2>
 
-</figure>
+<p>The central modification considered in this project is the introduction of anisotropic quenched disorder. Quenched disorder is a form of frozen randomness that does not evolve on the timescale of the order-parameter fluctuations.</p>
 
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
+<p>It may represent impurities, structural defects, or spatially irregular interactions embedded in the material. Unlike thermal noise, which fluctuates dynamically, quenched disorder remains fixed while the physical system equilibrates.</p>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/5-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/5-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/5-1400.webp"></source>
-    
+<p>Thermodynamic quantities must first be calculated for each fixed disorder realization. Only afterward is an average over the different disorder configurations performed.</p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p>The disorder can be introduced through an anisotropic coupling to the gradient sector,</p>
 
-  </picture>
+<p>\begin{equation}
+\mathcal{H}<em>{\mathrm{dis}}
+=
+\frac{1}{2}
+\int d^d x\,
+\delta K</em>{ij}(\mathbf{x})
+\,
+\partial_i\boldsymbol{\phi}
+\cdot
+\partial_j\boldsymbol{\phi}.
+\end{equation}</p>
 
-</figure>
+<p>Here, (\delta K_{ij}(\mathbf{x})) is a random tensor describing local variations in the stiffness of the field. Its mean is taken to vanish,</p>
 
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
+<p>\begin{equation}
+\overline{\delta K_{ij}(\mathbf{x})}=0,
+\end{equation}</p>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/5-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/5-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/5-1400.webp"></source>
-    
+<p>while its two-point correlation function is written as</p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p>\begin{equation}
+\overline{
+\delta K_{ij}(\mathbf{x})
+\delta K_{kl}(\mathbf{x}’)
+}
+=
+\Delta_{ij,kl}
+C(\mathbf{x}-\mathbf{x}’).
+\end{equation}</p>
 
-  </picture>
+<p>The tensor (\Delta_{ij,kl}) describes the directional structure of the disorder, while (C(\mathbf{x}-\mathbf{x}’)) determines its spatial correlation range.</p>
 
-</figure>
+<p>The essential feature is that the frozen disorder treats different spatial directions differently.</p>
 
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+<h2 id="mean-field-analysis">Mean-field analysis</h2>
 
-<p>You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, <em>bled</em> for your project, and then… you reveal its glory in the next row of images.</p>
+<p>The first stage of the project is a mean-field analysis. This allows us to investigate whether the disorder changes the location or basic structure of the phase transition.</p>
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        <figure>
+<p>For example, the disorder may modify the effective stiffness or shift the critical temperature (T_c). However, a shift in (T_c) does not by itself indicate a new universality class. The critical temperature is a non-universal quantity and generally depends on microscopic properties.</p>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/6-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/6-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/6-1400.webp"></source>
-    
+<p>The more fundamental question is whether the disorder changes the critical exponents and the long-distance scaling behaviour.</p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/6.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<h2 id="disorder-averaging-and-the-replica-trick">Disorder averaging and the replica trick</h2>
 
-  </picture>
+<p>For a fixed disorder realization, the partition function is</p>
 
-</figure>
+<p>\begin{equation}
+Z[\delta K]
+=
+\int
+\mathcal{D}\boldsymbol{\phi}\,
+\exp
+\left[
+-\mathcal{H}
+[\boldsymbol{\phi},\delta K]
+\right].
+\end{equation}</p>
 
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <figure>
+<p>The disorder-averaged free energy depends on (\overline{\ln Z}), which is difficult to calculate directly. The standard method for handling this quantity is the replica trick,</p>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/11-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/11-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/11-1400.webp"></source>
-    
+<p>\begin{equation}
+\overline{\ln Z}
+=
+\lim_{N\rightarrow 0}
+\frac{
+\overline{Z^N}-1
+}{N}.
+\end{equation}</p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/11.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p>In this procedure, (N) copies, or replicas, of the original field are introduced. The replicated partition function is then averaged over the disorder.</p>
 
-  </picture>
+<p>After this average, the disorder generates effective interactions between different replicas. The resulting replicated Hamiltonian contains the original quartic interaction together with additional couplings determined by the strength, spatial correlation, and tensor structure of the quenched disorder.</p>
 
-</figure>
+<h2 id="renormalization-group-analysis">Renormalization-group analysis</h2>
 
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+<p>The renormalization group is then applied to the disorder-averaged effective theory. The main question is whether the disorder couplings decrease or grow as short-distance degrees of freedom are integrated out.</p>
 
-<p>The code is simple.
-Just wrap your images with <code class="language-plaintext highlighter-rouge">&lt;div class="col-sm"&gt;</code> and place them inside <code class="language-plaintext highlighter-rouge">&lt;div class="row"&gt;</code> (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/" rel="external nofollow noopener" target="_blank">Bootstrap Grid</a> system).
-To make images responsive, add <code class="language-plaintext highlighter-rouge">img-fluid</code> class to each; for rounded corners and shadows use <code class="language-plaintext highlighter-rouge">rounded</code> and <code class="language-plaintext highlighter-rouge">z-depth-1</code> classes.
-Here’s the code for the last row of images above:</p>
+<p>Near the upper critical dimension (d=4), the calculation can be organized using the expansion parameter</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-sm-center"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8 mt-3 mt-md-0"</span><span class="nt">&gt;</span>
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4 mt-3 mt-md-0"</span><span class="nt">&gt;</span>
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div>
+<p>\begin{equation}
+\epsilon=4-d.
+\end{equation}</p>
 
+<p>Each coupling (g_i) has an associated beta function,</p>
+
+<p>\begin{equation}
+\beta_{g_i}
+=
+\mu
+\frac{d g_i}{d\mu},
+\end{equation}</p>
+
+<p>where (\mu) is the renormalization scale.</p>
+
+<p>The fixed points of the theory satisfy</p>
+
+<p>\begin{equation}
+\beta_{g_i}
+\left(
+g_1^{<em>},
+g_2^{</em>},
+\ldots
+\right)
+=
+0.
+\end{equation}</p>
+
+<p>If the disorder coupling flows to zero, the disorder is irrelevant in the renormalization-group sense. The system then retains the universal critical behaviour of the clean (\phi^4) model.</p>
+
+<p>If the disorder coupling instead approaches a stable nonzero fixed point, the system may belong to a new disorder-controlled universality class with modified critical exponents.</p>
+
+<h2 id="critical-quantities">Critical quantities</h2>
+
+<p>The principal critical quantities include the correlation-length exponent (\nu), the anomalous dimension (\eta), the susceptibility exponent (\gamma), and the order-parameter exponent (\beta).</p>
+
+<p>Near the critical point, the correlation length behaves as</p>
+
+<p>\begin{equation}
+\xi
+\sim
+|T-T_c|^{-\nu}.
+\end{equation}</p>
+
+<p>At criticality, the two-point correlation function scales as</p>
+
+<p>\begin{equation}
+G(\mathbf{x})
+\sim
+\frac{1}{
+|\mathbf{x}|^{d-2+\eta}
+}.
+\end{equation}</p>
+
+<p>Since the disorder is anisotropic, it is also necessary to determine whether a single correlation length is sufficient. The correlation lengths parallel and perpendicular to a preferred direction may scale differently,</p>
+
+<p>\begin{equation}
+\xi_{\parallel}
+\sim
+|T-T_c|^{-\nu_{\parallel}},
+\qquad
+\xi_{\perp}
+\sim
+|T-T_c|^{-\nu_{\perp}}.
+\end{equation}</p>
+
+<p>A genuinely anisotropic fixed point would therefore produce direction-dependent critical scaling.</p>
+
+<p>Alternatively, the microscopic anisotropy may become irrelevant under renormalization-group flow. In that case, rotational symmetry would effectively be restored at large length scales.</p>
+
+<h2 id="the-central-question">The central question</h2>
+
+<p>The central question of this project is:</p>
+
+<blockquote>
+  <p>How robust is universal critical behaviour against frozen, direction-dependent disturbances?</p>
+</blockquote>
+
+<p>The answer depends on several properties of the system, including the strength of the disorder, the operator to which it couples, its spatial correlations, the number of components of the order parameter, and the spatial dimension.</p>
+
+<p>The project follows the full theoretical development from the microscopic field theory to its macroscopic predictions. We begin with the equilibrium (\phi^4) Hamiltonian, introduce anisotropic quenched disorder, perform disorder averaging, derive the renormalization-group equations, and investigate the resulting fixed points and critical exponents.</p>
+
+<p>The ultimate goal is to determine whether anisotropic quenched disorder merely shifts non-universal quantities such as (T_c), or whether it fundamentally changes the universality class of the paramagnetic-to-ferromagnetic transition.</p>
+
+<p>This captures the central philosophy of the renormalization group: large-scale physics is not controlled by every microscopic detail, but by the limited number of interactions that remain relevant under coarse-graining. Whether anisotropic quenched disorder is one of these relevant interactions is the main question we are investigating.</p>
 
           </article>
 
