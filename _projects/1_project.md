@@ -6,7 +6,7 @@ img: assets/img/gravitational_wave_project.jpg
 importance: 2
 category: research
 related_publications: false
----------------------------
+---
 
 ## Project overview
 
