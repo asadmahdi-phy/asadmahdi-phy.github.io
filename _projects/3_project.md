@@ -8,7 +8,7 @@ category: research
 related_publications: false
 ---
 
-At Nordita, I am working with Dr. Dhrubaditya Mitra on a question at the intersection of statistical field theory and phase transitions: what happens to critical behaviour when spatially anisotropic, frozen disorder is introduced into the \(\phi^4\) model? Specifically, does this form of frozen roughness change the universal properties of the paramagnetic-to-ferromagnetic phase transition?
+At Nordita, I am working with Dr. Dhrubaditya Mitra on a question at the intersection of statistical field theory and phase transitions: what happens to critical behaviour when spatially anisotropic, frozen disorder is introduced into the $\phi^4$ model? Specifically, does this form of frozen roughness change the universal properties of the paramagnetic-to-ferromagnetic phase transition?
 
 ## Why universality matters
 
