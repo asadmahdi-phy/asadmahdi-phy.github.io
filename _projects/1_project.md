@@ -11,7 +11,7 @@ related_publications: false
 
 ## Project overview
 
-During my research internship at the **Laboratoire des Deux Infinis de Toulouse (L2IT)**, I worked with **Sylvain Marsat** and **Nicola Tamanini** on tests of general relativity using gravitational waves from massive black-hole binaries. The project was motivated by the future **Laser Interferometer Space Antenna (LISA)**, which will observe massive black-hole mergers with exceptionally high signal-to-noise ratios.
+During my research internship at the **Laboratoire des Deux Infinis de Toulouse (L2IT)**, I worked with **Sylvain Marsat** and **Manuel Piarulli** on tests of general relativity using gravitational waves from massive black-hole binaries. The project was motivated by the future **Laser Interferometer Space Antenna (LISA)**, which will observe massive black-hole mergers with exceptionally high signal-to-noise ratios.
 
 A binary black-hole gravitational-wave signal contains three connected stages: inspiral, merger, and ringdown. Parameterized tests of gravity often associate particular deviation parameters with one of these stages. Inspiral tests, for example, introduce corrections to the post-Newtonian phase, while ringdown tests modify the frequencies or damping times of the remnant black hole’s quasinormal modes.
 
