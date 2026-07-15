@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: "Testing General Relativity with Gravitational Waves"
 description: "Can merger-ringdown deviations be misinterpreted as deviations in the inspiral?"
