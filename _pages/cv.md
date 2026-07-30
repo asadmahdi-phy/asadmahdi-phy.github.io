@@ -345,7 +345,7 @@ LinkedIn
 <h2 class="cv-section-title">Research Projects</h2>
 <div class="cv-entry">
 <div>
-<img alt="L2IT Toulouse" class="cv-thumbnail" loading="lazy" src="{{ '/assets/img/institutions/l2it.jpg' | relative_url }}"/>
+<img alt="L2IT Toulouse" class="cv-thumbnail" loading="lazy" src="{{ '/assets/img/institutions/L2IT.jpg' | relative_url }}"/>
 </div>
 <div class="cv-entry-content">
 <h3>Testing General Relativity with Gravitational Waves</h3>
@@ -380,7 +380,7 @@ LinkedIn
 </div>
 <div class="cv-entry">
 <div>
-<img alt="Stockholm University" class="cv-thumbnail" loading="lazy" src="{{ '/assets/img/institutions/stockholm-university.jpg' | relative_url }}"/>
+<img alt="NORDITA" class="cv-thumbnail" loading="lazy" src="{{ '/assets/img/institutions/NORDITA.jpg' | relative_url }}"/>
 </div>
 <div class="cv-entry-content">
 <h3>
@@ -414,7 +414,7 @@ LinkedIn
 </div>
 <div class="cv-entry">
 <div>
-<img alt="BRAC University" class="cv-thumbnail" loading="lazy" src="{{ '/assets/img/institutions/brac-university.jpg' | relative_url }}"/>
+<img alt="BRAC University" class="cv-thumbnail" loading="lazy" src="{{ '/assets/img/institutions/bracu.jpg' | relative_url }}"/>
 </div>
 <div class="cv-entry-content">
 <h3>Quantum Complexity in Cosmology</h3>
