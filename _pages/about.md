@@ -27,4 +27,4 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 
 An aspiring researcher of two infinities - from the smallest building blocks as quantum fields to the largest scales of the relativistic universe. After completing my foundational training in Bangladesh, I moved to France to pursue advanced studies, aiming to build a career in theoretical, numerical, and computational physics.
 
-Beyond research, I find joy in exploring cities, fighting fascism in Bangladesh, and contemplating the boundlessness of the universe, human folly, and my talent for ruining a packet of pasta.
+Beyond research, I find joy in traveling around European cities, teaching maths and physics, and fighting fascism in Bangladesh.
