@@ -2,6 +2,7 @@
 layout: page
 title: Probing Beyond-Kerr Spacetimes with Extreme Mass-Ratio Inspirals
 description: Developing EMRI waveforms in a refined parametrized-Kerr spacetime using geodesic dynamics, the Teukolsky formalism, and the Sasaki-Nakamura transformation.
+img: assets/img/EMRI project.jpg
 importance: 1
 category: research
 related_publications: false
