@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Testing General Relativity with Gravitational Waves"
-description: "Can merger-ringdown deviations be misinterpreted as deviations in the inspiral?"
+description: "Studying how merger-ringdown modifications bias parameterized inspiral tests for LISA."
 img: assets/img/gravitational_wave_project.jpg
 importance: 2
 category: research
@@ -10,101 +10,81 @@ related_publications: false
 
 ## Project overview
 
-During my research internship at the **Laboratoire des Deux Infinis de Toulouse (L2IT)**, I worked with **Sylvain Marsat** and **Manuel Piarulli** on tests of general relativity using gravitational waves from massive black-hole binaries. The project was motivated by the future **Laser Interferometer Space Antenna (LISA)**, which will observe massive black-hole mergers with exceptionally high signal-to-noise ratios.
+During my research internship at the **Laboratoire des Deux Infinis de Toulouse (L2IT)**, I worked with **Sylvain Marsat** and **Manuel Piarulli** on systematic biases in gravitational-wave tests of general relativity (GR). We studied simulated signals from massive black-hole binaries relevant to the future **Laser Interferometer Space Antenna (LISA)**.
 
-A binary black-hole gravitational-wave signal contains three connected stages: inspiral, merger, and ringdown. Parameterized tests of gravity often associate particular deviation parameters with one of these stages. Inspiral tests, for example, introduce corrections to the post-Newtonian phase, while ringdown tests modify the frequencies or damping times of the remnant black hole’s quasinormal modes.
+Our question was specific: **if a signal has a modified merger-ringdown but a GR inspiral, can an analysis mistakenly recover a nonzero inspiral-deviation parameter?** To investigate this, we constructed signals with controlled ringdown modifications and analysed them with models that allowed deviations only in the inspiral sector. We then compared approximate predictions of the resulting parameter biases with full Bayesian parameter estimation.
 
-However, the full signal is analysed simultaneously. A modelling error or an unmodelled physical effect in one part of the waveform can therefore influence parameters associated with another part.
+## Constructing the modified signals
 
-The central question of our project was:
+We used an aligned-spin binary with total mass $M = 10^6 M_\odot$, mass ratio $q = 4$, and component spins $\chi_1 = \chi_2 = 0.5$. The waveform included six spherical-harmonic modes: $(2,2)$, $(2,1)$, $(3,3)$, $(4,4)$, $(4,3)$, and $(5,5)$.
 
-> **Can a deviation introduced only in the merger-ringdown sector be incorrectly recovered as a deviation in the inspiral phase?**
-
-## Injection-recovery framework
-
-We studied this problem using an **injection-recovery framework**. The injection represents the signal produced by nature, while the recovery waveform represents the model used to analyse the signal.
-
-For the injection, we constructed a waveform with a general-relativistic inspiral but a modified merger-ringdown. The modification changed the characteristic frequency and damping time of the ringdown modes,
+The ringdown modification was introduced through **pSEOBNRv5HM**, using the parameterized ringdown functionality available in **pySEOBNR**. We changed the oscillation frequency and damping time associated with the dominant $(2,2)$ mode,
 
 $$
-\omega \rightarrow \omega(1+\delta\omega),
+\omega_{22} \rightarrow \omega_{22}(1+\delta\omega_{22}),
 \qquad
-\tau \rightarrow \tau(1+\delta\tau).
+\tau_{22} \rightarrow \tau_{22}(1+\delta\tau_{22}),
 $$
 
-Several values of the fractional deviations (\delta\omega) and (\delta\tau) were considered to determine how the recovered parameters changed with the strength of the modification.
-
-The recovery model was constructed with the opposite assumption. Its merger-ringdown sector followed general relativity, while one **Flexible Theory-Independent (FTI)** inspiral-phase parameter was allowed to vary in each analysis. FTI parameters modify individual post-Newtonian contributions to the inspiral phase without selecting a particular alternative theory of gravity.
-
-The structure of the analysis was therefore
+while retaining the GR inspiral dynamics and leaving the other modes' ringdown parameters unchanged. We varied the two fractional deviations together,
 
 $$
-\text{Injection: GR inspiral + modified merger-ringdown},
+\delta\omega_{22}=\delta\tau_{22}
+\in \{0,10^{-4},10^{-3},10^{-2},0.1\}.
 $$
 
-$$
-\text{Recovery: modified inspiral + GR merger-ringdown}.
-$$
+For each case, we generated the time-domain modes, applied a Planck taper to reduce edge effects, and Fourier transformed the signals. This gave us both the amplitude and phase changes produced by the ringdown modification.
 
-This deliberate inconsistency allowed us to test whether the recovery model would compensate for missing merger-ringdown physics by shifting an inspiral-deviation parameter away from its general-relativistic value.
+An important part of the work was separating the intended modification from differences between waveform implementations. Our recovery model, **SEOBNRv5HMROM**, is a fast frequency-domain reduced-order model. Even with no ringdown deviation, its waveform is not numerically identical to the Fourier-transformed time-domain waveform. Directly comparing the two would therefore mix the injected effect with their baseline differences.
 
-## Measuring systematic bias
-
-We investigated the resulting parameter shifts using full Bayesian parameter estimation and the **Cutler-Vallisneri systematic-bias formalism**.
-
-If the true signal and the approximate recovery model differ by
+To reduce this problem, we extracted a complex multiplier from the modified and unmodified pSEOBNR waveforms. For each mode, it combined their amplitude ratio and phase difference,
 
 $$
-\delta h = h_{\mathrm{true}}-h_{\mathrm{approx}},
+\mathcal{M}_{\ell m}(f)
+=\frac{A^{\mathrm{dev}}_{\ell m}(f)}{A^{\mathrm{GR}}_{\ell m}(f)}
+\exp\!\left[i\Delta\Phi_{\ell m}(f)\right].
 $$
 
-the leading-order shift in the inferred parameters is
+After removing a constant phase offset and interpolating onto the ROM frequency grid, we applied this multiplier to each ROM mode's contribution to the LISA signal. The injection and recovery then shared a ROM baseline, with the injection carrying the relative waveform change extracted from pSEOBNR. In the zero-deviation limit, the multiplier reduces to unity.
+
+## Recovering the signal with inspiral deviations
+
+We constructed the LISA **time-delay interferometry (TDI)** signals using **lisabeta**, accounting for the detector response before comparing waveforms. We also aligned the waveforms in time, orbital phase, and polarization, and evaluated their agreement using noise-weighted overlaps.
+
+The recovery waveform retained a GR merger-ringdown but included one active **Flexible Theory-Independent (FTI)** inspiral parameter in each run. The tested parameters included post-Newtonian phase coefficients and corrections associated with spin-induced quadrupole moments and gravitational-wave tails. The ordinary source parameters were allowed to vary along with the selected FTI parameter.
+
+This setup deliberately gave the recovery model an incomplete description of the injected signal. It could adjust masses, spins, and other source parameters, or shift the active inspiral coefficient, but it could not directly reproduce the injected ringdown modification. All injected FTI coefficients were zero, so a recovered displacement measured how the model responded to the missing merger-ringdown physics.
+
+## Estimating and checking the parameter biases
+
+We first used the **Cutler-Vallisneri (CV) formalism** to estimate the systematic shifts. We calculated the residual between the injection and the reference recovery waveform, evaluated waveform derivatives numerically, and constructed the Fisher matrix. The leading-order bias is
 
 $$
-\Delta\theta^{i} = \left(\Gamma^{-1}\right)^{ij}
-\left\langle
-\partial_j h
-\middle|
-\delta h
-\right\rangle,
+\Delta\lambda^i_{\mathrm{CV}}
+= (\Gamma^{-1})^{ij}
+\left\langle \partial_j h\mid\delta h\right\rangle,
+\qquad
+\delta h=h_{\mathrm{inj}}-h_{\mathrm{rec}}.
 $$
 
-where \(\Gamma_{ij}\) is the Fisher information matrix. We compared this systematic shift with the statistical uncertainty,
+Here, $\boldsymbol{\lambda}$ includes the source parameters and the active FTI coefficient. We compared each predicted shift with its Fisher uncertainty, $\sigma_i=\sqrt{(\Gamma^{-1})^{ii}}$, to assess its size relative to the statistical precision of the measurement.
 
-$$
-\sigma_i = \sqrt{\left(\Gamma^{-1}\right)_{ii}}.
-$$
+We then performed **Bayesian parameter estimation**, examining likelihood traces, marginalized posteriors, and joint parameter distributions. We measured posterior-median displacements from the injected values and compared them with the CV predictions. These were comparisons of parameter recovery within each model, rather than comparisons of Bayesian evidence between models.
 
-The ratio
+The GR null tests were essential checks. A direct comparison of the time-domain GR waveform with the ROM gave biases below $0.5\sigma$. With the multiplier construction, the reported CV null-test biases fell below approximately $10^{-3}\sigma$. The Bayesian null test also recovered an FTI posterior consistent with zero. These checks established the behavior of the pipeline at zero deviation, although they do not independently rule out numerical errors in every modified injection.
 
-$$
-\frac{|\Delta\theta^i|}{\sigma_i}
-$$
+## What we found
 
-measures the importance of the modelling bias. A value close to or greater than one means that the systematic displacement is comparable to, or larger than, the expected statistical uncertainty.
+**A merger-ringdown modification can shift both the recovered source parameters and an inspiral-deviation coefficient.** The size and sign of the FTI shift depended on which coefficient was allowed to vary, reflecting its frequency dependence and its correlations with the other parameters.
 
-Geometrically, the recovery model defines a manifold of possible waveforms. A signal containing an unmodelled merger-ringdown deviation does not lie exactly on this manifold. Parameter estimation therefore selects the closest available waveform, and the displacement of its parameters from the true values appears as a systematic bias.
+For the **1% ringdown modification**, several parameter shifts exceeded their statistical uncertainties. In the recovery with the spin-induced quadrupole parameter $\delta\kappa_s$ active, for example, the mass ratio moved from $4$ to about $3.93$, and the effective spin moved from $0.50$ to about $0.44$. The $\delta\kappa_s$ displacement was approximately $-1.2\sigma$. This was not a significant detection of modified inspiral physics, but it showed how an apparent inspiral shift could arise without introducing that effect into the signal.
 
-## Main findings
+For deviations between **$10^{-4}$ and $10^{-2}$**, the CV predictions broadly followed the direction and approximate size of the normalized Bayesian posterior shifts. The main discrepancies involved the time parameter. At $10^{-4}$, the shifts were below approximately $0.15\sigma$ for the configuration studied.
 
-Our analysis showed that a deviation confined to the merger-ringdown can bias the recovery of inspiral-sector parameters. The recovery model can partially absorb the missing late-time physics by shifting an FTI inspiral parameter away from its general-relativistic value.
+The **10% modification** required a different conclusion: the Bayesian runs did not converge to reliable posterior distributions. Their likelihood traces continued to evolve, and the posteriors were fragmented or multimodal. We therefore excluded this case from the quantitative CV–Bayesian comparison.
 
-The effect was not identical for all FTI parameters. Each parameter modifies a different frequency-dependent contribution to the inspiral phase, so different parameters have different abilities to compensate for the waveform discrepancy produced by the modified merger-ringdown.
+## Interpretation and scope
 
-For some injected deviations and FTI parameters, the systematic shift became comparable to the corresponding statistical uncertainty. The analysis could therefore indicate an apparently significant inspiral deviation even though the physical modification had been introduced only in the merger-ringdown.
+The result concerns how parameters are inferred from the complete signal. Changes in masses and spins that help accommodate a modified ringdown also change the predicted inspiral. An FTI correction can compensate for part of that change while all parameters are fitted together. A nonzero inspiral coefficient therefore does not, by itself, identify where the underlying waveform modification occurred.
 
-We also performed a null test with no injected merger-ringdown deviation. In this case, the recovered FTI parameters remained close to their general-relativistic values. This confirmed that the biases observed in the modified cases were associated with the intended waveform inconsistency rather than with the numerical procedure itself.
-
-For sufficiently small deviations, the Cutler-Vallisneri prediction reproduced the direction and approximate magnitude of the shifts found through parameter estimation. At larger deviations, nonlinear effects and broader correlations between parameters became increasingly important.
-
-## Why this matters for LISA
-
-LISA is expected to observe massive black-hole mergers with very high signal-to-noise ratios. Such observations will provide extremely small statistical uncertainties and create an unprecedented opportunity to test gravity in the strong-field regime.
-
-At the same time, high measurement precision makes waveform systematics more important. Statistical errors decrease as the signal becomes stronger, but modelling errors do not necessarily decrease. Even a relatively small mismatch between the true signal and the recovery model can therefore produce an apparently significant deviation from general relativity.
-
-Our results show that an inspiral-deviation parameter cannot always be interpreted as a measurement of inspiral physics alone. A nonzero value could instead be caused by missing or inaccurate merger-ringdown physics. Tests applied to the inspiral, merger, and ringdown are connected through the global waveform fit and through correlations in parameter space.
-
-Reliable tests of gravity with LISA will therefore require accurate waveform models across the complete inspiral-merger-ringdown signal, frameworks that allow deviations in more than one waveform sector, consistency checks between inspiral and merger-ringdown tests, and careful comparisons between systematic and statistical uncertainties.
-
-This project addresses a central challenge in precision gravitational-wave astronomy: distinguishing a genuine failure of general relativity from an apparent deviation produced by an incomplete waveform model. Controlling these cross-sector biases will be essential for converting LISA’s exceptional measurement precision into reliable conclusions about the fundamental nature of gravity.
+This study used one binary configuration, modified only the dominant mode, and varied its frequency and damping time together. The results establish this bias mechanism for the cases tested; they do not provide a universal deviation threshold for LISA. A natural extension is to vary the ringdown modifications independently and include them in the recovery alongside the inspiral parameters, testing whether accounting for the injected physics brings the recovered FTI coefficients back towards zero.
