@@ -232,7 +232,7 @@
       />
 
       <img
-        src="{{ '/assets/img/institutions/cpt.png' | relative_url }}"
+        src="{{ '/assets/img/institutions/cpt.jpg' | relative_url }}"
         alt="Centre de Physique Théorique"
         class="cv-institution-logo"
         loading="lazy"
