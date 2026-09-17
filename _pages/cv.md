@@ -1,4 +1,14 @@
+---
+layout: page
+title: CV
+permalink: /cv/
+description: Academic curriculum vitae of Asad Mahdi
+nav: true
+nav_order: 5
+---
+
 <style>
+
   .cv-container {
     max-width: 980px;
     margin: 0 auto;
@@ -34,19 +44,23 @@
     margin-bottom: 1.5rem;
   }
 
+
   /* =========================================================
-     CV ENTRIES
+     MAIN CV ENTRY
      ========================================================= */
 
   .cv-entry {
     display: grid;
     grid-template-columns: 135px 1fr;
-    gap: 1.5rem;
-    margin-bottom: 2.2rem;
+    gap: 1.4rem;
+    margin-bottom: 2rem;
     align-items: start;
   }
 
-  /* Single institution image */
+
+  /* =========================================================
+     SINGLE INSTITUTION LOGO
+     ========================================================= */
 
   .cv-thumbnail {
     width: 125px;
@@ -59,19 +73,22 @@
     box-sizing: border-box;
   }
 
-  /* Multiple institution logos */
+
+  /* =========================================================
+     MULTIPLE INSTITUTION LOGOS
+     ========================================================= */
 
   .cv-logo-stack {
-    width: 125px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.7rem;
+    gap: 0.65rem;
+    width: 125px;
   }
 
   .cv-logo-stack .cv-institution-logo {
     width: 125px;
-    height: 64px;
+    height: 62px;
     object-fit: contain;
     background: white;
     border: 1px solid var(--global-divider-color);
@@ -80,25 +97,23 @@
     box-sizing: border-box;
   }
 
-  /*
-    Slightly taller logos for entries containing only two institutions,
-    such as Aix-Marseille Université + CPT.
-  */
 
-  .cv-logo-stack.cv-logo-stack-two .cv-institution-logo {
+  /* AMU + CPT */
+
+  .cv-logo-stack-two .cv-institution-logo {
     height: 72px;
   }
 
-  /*
-    Slightly more compact logos for the three NPAC universities.
-  */
 
-  .cv-logo-stack.cv-logo-stack-three .cv-institution-logo {
+  /* NPAC: Paris Cité + Paris-Saclay + Sorbonne */
+
+  .cv-logo-stack-three .cv-institution-logo {
     height: 58px;
   }
 
+
   /* =========================================================
-     ENTRY TEXT
+     ENTRY CONTENT
      ========================================================= */
 
   .cv-entry-content h3 {
@@ -131,6 +146,11 @@
     margin-left: -1.25rem;
   }
 
+
+  /* =========================================================
+     SIMPLE ENTRIES
+     ========================================================= */
+
   .cv-simple-entry {
     margin-bottom: 1.5rem;
   }
@@ -138,6 +158,11 @@
   .cv-simple-entry h3 {
     margin-bottom: 0.25rem;
   }
+
+
+  /* =========================================================
+     TWO COLUMN BOXES
+     ========================================================= */
 
   .cv-two-column {
     display: grid;
@@ -155,6 +180,11 @@
     margin-top: 0;
   }
 
+
+  /* =========================================================
+     DROPDOWN SECTIONS
+     ========================================================= */
+
   details {
     margin-top: 0.8rem;
     padding: 0.7rem 0.9rem;
@@ -167,11 +197,13 @@
     font-weight: 600;
   }
 
+
   /* =========================================================
      MOBILE
      ========================================================= */
 
   @media (max-width: 700px) {
+
     .cv-entry {
       grid-template-columns: 1fr;
       gap: 1rem;
@@ -191,8 +223,8 @@
     }
 
     .cv-logo-stack .cv-institution-logo,
-    .cv-logo-stack.cv-logo-stack-two .cv-institution-logo,
-    .cv-logo-stack.cv-logo-stack-three .cv-institution-logo {
+    .cv-logo-stack-two .cv-institution-logo,
+    .cv-logo-stack-three .cv-institution-logo {
       width: 110px;
       height: 58px;
     }
@@ -200,8 +232,69 @@
     .cv-two-column {
       grid-template-columns: 1fr;
     }
+
   }
+
 </style>
+
+
+<div class="cv-container">
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="cv-header">
+
+  <h1>Asad Mahdi</h1>
+
+  <div class="cv-subtitle">
+    Master’s student in high-energy physics, gravity, and cosmology
+  </div>
+
+  <div class="cv-contact">
+
+    France<br>
+
+    <a href="mailto:asadmahdi.6.162@gmail.com">
+      asadmahdi.6.162@gmail.com
+    </a>
+
+    &nbsp;|&nbsp;
+
+    <a href="mailto:asad.mahdi@etu.u-paris.fr">
+      asad.mahdi@etu.u-paris.fr
+    </a>
+
+    <br>
+
+    LinkedIn
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     PROFILE
+     ========================================================= -->
+
+<section class="cv-section">
+
+  <h2 class="cv-section-title">Profile</h2>
+
+  <p>
+    Master’s 2 student in high-energy physics and gravity, aspiring to
+    pursue doctoral research in theoretical, numerical, and computational
+    physics. My current interests include gravitational-wave physics,
+    tests of general relativity, cosmology, quantum gravity, statistical
+    physics, and renormalization-group methods.
+  </p>
+
+</section>
+
 
 
 <!-- =========================================================
@@ -219,6 +312,9 @@
 
   <div class="cv-entry">
 
+
+    <!-- AMU + CPT logos -->
+
     <div
       class="cv-logo-stack cv-logo-stack-two"
       aria-label="Aix-Marseille Université and Centre de Physique Théorique"
@@ -229,17 +325,19 @@
         alt="Aix-Marseille Université"
         class="cv-institution-logo"
         loading="lazy"
-      />
+      >
 
       <img
         src="{{ '/assets/img/institutions/cpt.jpg' | relative_url }}"
         alt="Centre de Physique Théorique"
         class="cv-institution-logo"
         loading="lazy"
-      />
+      >
 
     </div>
 
+
+    <!-- AMU degree content -->
 
     <div class="cv-entry-content">
 
@@ -270,7 +368,9 @@
 
           <details>
 
-            <summary>First Semester Courses</summary>
+            <summary>
+              First Semester Courses
+            </summary>
 
             <ul>
               <li>General Relativity</li>
@@ -292,11 +392,15 @@
   </div>
 
 
+
   <!-- =======================================================
        NPAC MASTER'S
        ======================================================= -->
 
   <div class="cv-entry">
+
+
+    <!-- Three NPAC component-university logos -->
 
     <div
       class="cv-logo-stack cv-logo-stack-three"
@@ -308,24 +412,26 @@
         alt="Université Paris Cité"
         class="cv-institution-logo"
         loading="lazy"
-      />
+      >
 
       <img
         src="{{ '/assets/img/institutions/paris-saclay.png' | relative_url }}"
         alt="Université Paris-Saclay"
         class="cv-institution-logo"
         loading="lazy"
-      />
+      >
 
       <img
         src="{{ '/assets/img/institutions/sorbonne-universite.png' | relative_url }}"
         alt="Sorbonne Université"
         class="cv-institution-logo"
         loading="lazy"
-      />
+      >
 
     </div>
 
+
+    <!-- NPAC degree content -->
 
     <div class="cv-entry-content">
 
@@ -355,7 +461,9 @@
 
           <details>
 
-            <summary>Relevant Coursework</summary>
+            <summary>
+              Relevant Coursework
+            </summary>
 
             <ul>
 
@@ -371,8 +479,8 @@
               </li>
 
               <li>
-                Particle Physics – Additional Topics
-                (Symmetry Breaking, Yang–Mills Theory, and
+                Particle Physics - Additional Topics
+                (Symmetry Breaking, Yang-Mills Theory, and
                 Renormalization Group Analysis)
               </li>
 
@@ -397,8 +505,10 @@
   </div>
 
 
+
   <!-- =======================================================
-       UNIVERSITY OF DHAKA — MSc
+       UNIVERSITY OF DHAKA
+       MASTER OF SCIENCE
        ======================================================= -->
 
   <div class="cv-entry">
@@ -410,10 +520,9 @@
         alt="University of Dhaka"
         class="cv-thumbnail"
         loading="lazy"
-      />
+      >
 
     </div>
-
 
     <div class="cv-entry-content">
 
@@ -459,8 +568,10 @@
   </div>
 
 
+
   <!-- =======================================================
-       UNIVERSITY OF DHAKA — BSc
+       UNIVERSITY OF DHAKA
+       BACHELOR OF SCIENCE
        ======================================================= -->
 
   <div class="cv-entry">
@@ -472,10 +583,9 @@
         alt="University of Dhaka"
         class="cv-thumbnail"
         loading="lazy"
-      />
+      >
 
     </div>
-
 
     <div class="cv-entry-content">
 
@@ -510,15 +620,17 @@
         </li>
 
         <li>
-          Included 32 credits of practical laboratory coursework
-          distributed over four years.
+          Included 32 credits of practical laboratory coursework distributed
+          over four years.
         </li>
 
         <li class="cv-details-item">
 
           <details>
 
-            <summary>Relevant Undergraduate Courses</summary>
+            <summary>
+              Relevant Undergraduate Courses
+            </summary>
 
             <ul>
               <li>Quantum Mechanics I and II</li>
@@ -551,6 +663,7 @@
   </div>
 
 
+
   <!-- =======================================================
        NOTRE DAME COLLEGE
        ======================================================= -->
@@ -564,10 +677,9 @@
         alt="Notre Dame College"
         class="cv-thumbnail"
         loading="lazy"
-      />
+      >
 
     </div>
-
 
     <div class="cv-entry-content">
 
@@ -600,6 +712,7 @@
   </div>
 
 
+
   <!-- =======================================================
        IDEAL SCHOOL AND COLLEGE
        ======================================================= -->
@@ -613,10 +726,9 @@
         alt="Ideal School and College"
         class="cv-thumbnail"
         loading="lazy"
-      />
+      >
 
     </div>
-
 
     <div class="cv-entry-content">
 
@@ -649,3 +761,567 @@
   </div>
 
 </section>
+
+
+
+<!-- =========================================================
+     RESEARCH PROJECTS
+     ========================================================= -->
+
+<section class="cv-section">
+
+  <h2 class="cv-section-title">
+    Research Projects
+  </h2>
+
+
+
+  <!-- L2IT -->
+
+  <div class="cv-entry">
+
+    <div>
+
+      <img
+        src="{{ '/assets/img/institutions/L2IT.jpg' | relative_url }}"
+        alt="L2IT Toulouse"
+        class="cv-thumbnail"
+        loading="lazy"
+      >
+
+    </div>
+
+    <div class="cv-entry-content">
+
+      <h3>
+        Testing General Relativity with Gravitational Waves
+      </h3>
+
+      <div class="cv-institution">
+        Laboratoire des 2 Infinis Toulouse, L2IT
+      </div>
+
+      <div class="cv-date">
+        March 2026 to July 2026 | Toulouse, France
+      </div>
+
+      <p>
+        Supervisor: Dr. Sylvain Marsat
+      </p>
+
+      <ul>
+
+        <li>
+          Studying gravitational waves from compact-binary coalescences
+          across the inspiral, merger, and ringdown regimes.
+        </li>
+
+        <li>
+          Modelling beyond-GR deviations using post-Newtonian phase
+          corrections and quasinormal-mode parametrizations.
+        </li>
+
+        <li>
+          Developing data-analysis tools to investigate how deviations in
+          one signal regime influence parameter recovery in another regime.
+        </li>
+
+        <li>
+          Investigating gravitational-wave signals for the Laser
+          Interferometer Space Antenna.
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- NORDITA -->
+
+  <div class="cv-entry">
+
+    <div>
+
+      <img
+        src="{{ '/assets/img/institutions/NORDITA.jpg' | relative_url }}"
+        alt="NORDITA"
+        class="cv-thumbnail"
+        loading="lazy"
+      >
+
+    </div>
+
+    <div class="cv-entry-content">
+
+      <h3>
+        Anisotropic Quenched Noise in the \( \phi^4 \) Model
+      </h3>
+
+      <div class="cv-institution">
+        Stockholm University
+      </div>
+
+      <div class="cv-date">
+        May 2026 to August 2026
+      </div>
+
+      <p>
+        Supervisor: Dr. Dhrubaditya Mitra
+      </p>
+
+      <ul>
+
+        <li>
+          Studying the renormalization group of the
+          \( \phi^4 \) model and evaluating its critical exponents.
+        </li>
+
+        <li>
+          Investigating the effect of anisotropic quenched noise on the
+          paramagnetic-to-ferromagnetic phase transition.
+        </li>
+
+        <li>
+          Applying mean-field and renormalization-group methods to study
+          changes in critical behaviour.
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- BRAC UNIVERSITY -->
+
+  <div class="cv-entry">
+
+    <div>
+
+      <img
+        src="{{ '/assets/img/institutions/bracu.jpg' | relative_url }}"
+        alt="BRAC University"
+        class="cv-thumbnail"
+        loading="lazy"
+      >
+
+    </div>
+
+    <div class="cv-entry-content">
+
+      <h3>
+        Quantum Complexity in Cosmology
+      </h3>
+
+      <div class="cv-institution">
+        BRAC University
+      </div>
+
+      <div class="cv-date">
+        June 2024 to Present
+      </div>
+
+      <p>
+        Supervisor: Professor Tibra Ali
+      </p>
+
+      <ul>
+
+        <li>
+          Studying quantum complexity for scalar curvature perturbations
+          using the squeezed-state formalism.
+        </li>
+
+        <li>
+          Considering perturbations around a
+          Friedmann-Lemaître-Robertson-Walker cosmological background.
+        </li>
+
+        <li>
+          Investigating possible connections between quantum complexity,
+          cosmological perturbations, and gravitational entropy.
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCHOLARSHIPS AND FELLOWSHIPS
+     ========================================================= -->
+
+<section class="cv-section">
+
+  <h2 class="cv-section-title">
+    Scholarships and Fellowships
+  </h2>
+
+
+  <div class="cv-simple-entry">
+
+    <h3>
+      SMARTS-UP International Mobility Fellowship
+    </h3>
+
+    <div class="cv-date">
+      2025 to 2026
+    </div>
+
+    <p>
+      Université Paris Cité and the French National Research Agency.
+      A one-year international mobility grant supporting master’s studies
+      and residence in France.
+    </p>
+
+  </div>
+
+
+  <div class="cv-simple-entry">
+
+    <h3>
+      National Science and Technology Fellowship
+    </h3>
+
+    <div class="cv-date">
+      2023
+    </div>
+
+    <p>
+      Ministry of Science and Technology, Government of Bangladesh.
+      Awarded with a research grant for the master’s thesis on the basis
+      of academic performance in the bachelor’s programme.
+    </p>
+
+  </div>
+
+
+  <div class="cv-simple-entry">
+
+    <h3>
+      General Scholarship
+    </h3>
+
+    <div class="cv-date">
+      2023
+    </div>
+
+    <p>
+      Ministry of Education, Government of Bangladesh. Merit-based
+      scholarship awarded for undergraduate academic performance.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     STANDARDIZED TEST SCORES
+     ========================================================= -->
+
+<section class="cv-section">
+
+  <h2 class="cv-section-title">
+    Standardized Test Scores
+  </h2>
+
+  <div class="cv-two-column">
+
+
+    <!-- TOEFL -->
+
+    <div class="cv-info-box">
+
+      <h3>
+        TOEFL iBT
+      </h3>
+
+      <p>
+        <strong>110/120</strong>
+      </p>
+
+      <ul>
+        <li>Reading: 30</li>
+        <li>Listening: 30</li>
+        <li>Speaking: 27</li>
+        <li>Writing: 23</li>
+      </ul>
+
+      Score report
+
+    </div>
+
+
+    <!-- GRE PHYSICS -->
+
+    <div class="cv-info-box">
+
+      <h3>
+        GRE Physics
+      </h3>
+
+      <p>
+        <strong>920/990</strong>
+      </p>
+
+      <p>
+        85th percentile
+      </p>
+
+      Score report
+
+    </div>
+
+
+    <!-- GRE GENERAL -->
+
+    <div class="cv-info-box">
+
+      <h3>
+        GRE General
+      </h3>
+
+      <p>
+        <strong>311</strong>
+      </p>
+
+      <ul>
+        <li>Quantitative Reasoning: 163</li>
+        <li>Analytical Writing: 4.0</li>
+      </ul>
+
+      Score report
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     COMPUTER AND RESEARCH SKILLS
+     ========================================================= -->
+
+<section class="cv-section">
+
+  <h2 class="cv-section-title">
+    Computer and Research Skills
+  </h2>
+
+  <div class="cv-two-column">
+
+
+    <div class="cv-info-box">
+
+      <h3>
+        Programming
+      </h3>
+
+      <p>
+        Python, C, C++
+      </p>
+
+    </div>
+
+
+    <div class="cv-info-box">
+
+      <h3>
+        Scientific Computing
+      </h3>
+
+      <p>
+        Wolfram Mathematica, NumPy, SciPy, Matplotlib, MS Excel
+      </p>
+
+    </div>
+
+
+    <div class="cv-info-box">
+
+      <h3>
+        Scientific Software
+      </h3>
+
+      <p>
+        LALSuite, lisabeta, Qiskit, COMSOL Multiphysics, Gnuplot, Origin
+      </p>
+
+    </div>
+
+
+    <div class="cv-info-box">
+
+      <h3>
+        Research Tools
+      </h3>
+
+      <p>
+        LaTeX, Git, GitHub, Jupyter Notebook, Linux, SLURM
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     REFERENCES
+     ========================================================= -->
+
+<section class="cv-section">
+
+  <h2 class="cv-section-title">
+    References
+  </h2>
+
+
+  <!-- SYLVAIN MARSAT -->
+
+  <div class="cv-simple-entry">
+
+    <h3>
+      Dr. Sylvain Marsat
+    </h3>
+
+    <p>
+      CNRS Researcher<br>
+      Laboratoire des 2 Infinis Toulouse, L2IT<br>
+      M2 internship supervisor
+    </p>
+
+    <a href="mailto:sylvain.marsat@l2it.in2p3.fr">
+      sylvain.marsat@l2it.in2p3.fr
+    </a>
+
+  </div>
+
+
+  <!-- DHRUBADITYA MITRA -->
+
+  <div class="cv-simple-entry">
+
+    <h3>
+      Dr. Dhrubaditya Mitra
+    </h3>
+
+    <p>
+      Assistant Professor<br>
+      Stockholm University and Nordic Institute of Theoretical Physics<br>
+      NORDITA summer internship supervisor
+    </p>
+
+    <a href="mailto:dhrubaditya.mitra@su.se">
+      dhrubaditya.mitra@su.se
+    </a>
+
+  </div>
+
+
+  <!-- IRENA NIKOLIC -->
+
+  <div class="cv-simple-entry">
+
+    <h3>
+      Dr. Irena Nikolic
+    </h3>
+
+    <p>
+      Université Paris Cité<br>
+      NPAC Master’s programme coordinator
+    </p>
+
+    <a href="mailto:nikolic@lpnhe.in2p3.fr">
+      nikolic@lpnhe.in2p3.fr
+    </a>
+
+  </div>
+
+
+  <!-- CÉCILE ROUCELLE -->
+
+  <div class="cv-simple-entry">
+
+    <h3>
+      Dr. Cécile Roucelle
+    </h3>
+
+    <p>
+      Université Paris Cité<br>
+      NPAC Master’s programme coordinator
+    </p>
+
+    <a href="mailto:roucelle@apc.in2p3.fr">
+      roucelle@apc.in2p3.fr
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INTERESTS AND ACTIVITIES
+     ========================================================= -->
+
+<section class="cv-section">
+
+  <h2 class="cv-section-title">
+    Interests and Activities
+  </h2>
+
+  <ul>
+
+    <li>
+      Writing literature
+    </li>
+
+    <li>
+      Travelling
+    </li>
+
+    <li>
+      Popularizing science
+    </li>
+
+    <li>
+      Debater at Ideal Debating Club from January 2011 to May 2015.
+    </li>
+
+    <li>
+      Participant and award winner in national debate competitions.
+    </li>
+
+    <li>
+      Volunteer in activities promoting debating among school students.
+    </li>
+
+    <li>
+      Academic volunteer and examiner at the Bangladesh Physics Olympiad
+      in 2023.
+    </li>
+
+  </ul>
+
+</section>
+
+
+</div>
