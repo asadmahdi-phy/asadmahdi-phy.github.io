@@ -540,16 +540,9 @@ nav_order: 5
 
       <ul>
 
-        <li>
-          GPA: <strong>3.82/4.00</strong>.
-        </li>
 
         <li>
-          Ranked <strong>3rd among 18</strong> theoretical-physics students.
-        </li>
-
-        <li>
-          One-year programme comprising 30 University of Dhaka credits.
+          One-year programme comprising 30 DU credits.
         </li>
 
         <li>
@@ -559,6 +552,27 @@ nav_order: 5
 
         <li>
           Thesis supervisor: Professor Tibra Ali, BRAC University.
+        </li>
+
+        <li class="cv-details-item">
+
+          <details>
+
+            <summary>
+              First Semester Courses
+            </summary>
+
+            <ul>
+              <li>General Relativity</li>
+              <li>Condensed Matter Physics</li>
+              <li>Relativistic Quantum Mechanics and Quantum Electrodynamics</li>
+              <li>Introduction to Standard Model I</li>
+              <li>Non-equilibrium Statistical Mechanics</li>
+              <li>Quantum Mechanics</li>
+            </ul>
+
+          </details>
+
         </li>
 
       </ul>
