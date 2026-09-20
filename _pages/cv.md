@@ -373,11 +373,11 @@ nav_order: 5
             </summary>
 
             <ul>
-              <li>General Relativity</li>
-              <li>Relativistic Universe</li>
-              <li>Advanced Quantum Field Theory</li>
-              <li>Advanced Quantum Mechanics</li>
-              <li>Galaxy and Cosmology</li>
+              <li>General Relativity (Formulation, Weak Field Limit, Gravitational Waves< Black Hole Thermodynamics)</li>
+              <li>Relativistic Universe (Standard Model of Cosmology, Inflation, Relativistic Perturbation Theory, Modified Gravity Predictions)</li>
+              <li>Advanced Quantum Field Theory (Renormalization Group and Effective Field Theory) </li>
+              <li>Advanced Quantum Mechanics (Path Integral Formalism of QM and Quantum Information Theory)</li>
+              <li>Galaxy and Cosmology (Early & Late Universe, Formation of Large Scale Structure, Numerical Cosmology, Gravitational Lensing)</li>
               <li>AI and Data Science</li>
             </ul>
 
