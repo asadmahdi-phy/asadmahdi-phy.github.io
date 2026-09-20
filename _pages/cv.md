@@ -559,7 +559,7 @@ nav_order: 5
           <details>
 
             <summary>
-              First Semester Courses
+              Coursework
             </summary>
 
             <ul>
@@ -616,14 +616,6 @@ nav_order: 5
       </div>
 
       <ul>
-
-        <li>
-          CGPA: <strong>3.78/4.00</strong>.
-        </li>
-
-        <li>
-          Ranked <strong>4th among 124 graduates</strong>.
-        </li>
 
         <li>
           Minor subjects: Mathematics and Statistics.
