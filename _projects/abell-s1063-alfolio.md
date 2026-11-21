@@ -4,7 +4,7 @@ title: "Strong-Lensing Cosmography with Abell S1063"
 description: "Gravitational-lensing constraints on cosmology from multiple-image systems in the galaxy cluster Abell S1063."
 img: assets/img/abell-s1063/cluster_mass_map.png
 importance: 4
-category: research
+category: academic
 permalink: /projects/abell-s1063-cosmography/
 date: 2026-11-19
 ---
