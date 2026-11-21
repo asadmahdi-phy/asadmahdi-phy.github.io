@@ -2,7 +2,7 @@
 layout: page
 title: "Standard Sirens for Gravitational-Wave Cosmology"
 description: "A Science Watch literature review of bright, dark, and spectral standard sirens, redshift inference, and selection effects in gravitational-wave cosmology."
-img: assets/img/standard_sirens_overview.png
+img: assets/img/standard_sirens_overview.jpg
 importance: 5
 category: academic
 permalink: /projects/standard-sirens-gw-cosmology/
